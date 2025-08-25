@@ -1,0 +1,9 @@
+{
+    "label": "Boutique Hotel Theme",
+    "css": [
+      "../../dist/tailwind.css"
+    ],
+    "js": [],
+    "modules": "modules",
+    "partials": "partials"
+}
