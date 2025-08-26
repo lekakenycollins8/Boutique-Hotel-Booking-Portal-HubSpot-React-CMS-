@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build-css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/tailwind.css --watch",
-    "start": "hs-cms-dev-server ./src/",
+    "start": "hs-cms-dev-server src",
     "dev": "npm run build-css & npm run start"
   },
   "devDependencies": {

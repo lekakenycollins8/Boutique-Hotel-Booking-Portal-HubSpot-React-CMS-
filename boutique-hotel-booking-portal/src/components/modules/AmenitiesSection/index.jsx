@@ -1,6 +1,8 @@
 import React from 'react';
+import { ModuleFields, TextField, RepeatedFieldGroup } from '@hubspot/cms-components/fields';
 
-export function Component({ fieldValues = {} }) {
+// ✅ Main component
+function AmenitiesSection({ fieldValues = {} }) {
   const {
     amenities_heading = "Hotel Amenities",
     amenities_description = "Enjoy our comprehensive range of amenities designed to make your stay comfortable, convenient, and memorable",
@@ -67,17 +69,19 @@ export function Component({ fieldValues = {} }) {
         {/* Amenities Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {amenities_list.map((amenity, index) => (
-            <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+            <div
+              key={index}
+              className="text-center group hover:transform hover:scale-105 transition-all duration-300"
+            >
               {/* Icon */}
               <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full flex items-center justify-center text-2xl group-hover:bg-blue-100 transition-colors duration-300">
                 {amenity.amenity_icon}
               </div>
-              
+
               {/* Content */}
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {amenity.amenity_name}
               </h3>
-              
               <p className="text-sm text-gray-600 leading-relaxed">
                 {amenity.amenity_description}
               </p>
@@ -87,9 +91,7 @@ export function Component({ fieldValues = {} }) {
 
         {/* CTA Section */}
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-6">
-            {cta_text}
-          </p>
+          <p className="text-gray-600 mb-6">{cta_text}</p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200">
             {cta_button_text}
           </button>
@@ -99,6 +101,10 @@ export function Component({ fieldValues = {} }) {
   );
 }
 
+// ✅ HubSpot requires this named export
+export const Component = AmenitiesSection;
+
+// ✅ Field definitions
 export const fields = (
   <ModuleFields>
     <TextField
@@ -162,15 +168,8 @@ export const fields = (
         }
       ]}
     >
-      <TextField
-        name="amenity_name"
-        label="Amenity Name"
-        required={true}
-      />
-      <TextField
-        name="amenity_description"
-        label="Amenity Description"
-      />
+      <TextField name="amenity_name" label="Amenity Name" required={true} />
+      <TextField name="amenity_description" label="Amenity Description" />
       <TextField
         name="amenity_icon"
         label="Amenity Icon (emoji or text)"
@@ -190,6 +189,7 @@ export const fields = (
   </ModuleFields>
 );
 
+// ✅ Meta info
 export const meta = {
   label: 'Amenities Section',
 };

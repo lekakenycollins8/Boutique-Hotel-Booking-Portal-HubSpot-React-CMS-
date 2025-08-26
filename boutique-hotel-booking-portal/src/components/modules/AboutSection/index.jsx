@@ -1,6 +1,8 @@
 import React from 'react';
+import { ModuleFields, TextField, ImageField } from '@hubspot/cms-components/fields';
 
-export function Component({ fieldValues = {} }) {
+// ✅ Main component
+function AboutSection({ fieldValues = {} }) {
   const {
     about_heading = "Welcome to Our Boutique Hotel",
     about_description_1 = "Nestled in the heart of the city, our boutique hotel offers an intimate and luxurious experience that combines modern comfort with timeless elegance. Each room is thoughtfully designed to provide our guests with a sanctuary of tranquility and sophistication.",
@@ -48,11 +50,11 @@ export function Component({ fieldValues = {} }) {
           {/* Image */}
           <div className="relative">
             <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-xl">
-            <img
-              src={about_image?.src || "/assets/about-hotel.jpg"}
-              alt={about_image?.alt || "Hotel Interior"}
-              className="w-full h-full object-cover"
-            />
+              <img
+                src={about_image?.src || "/assets/about-hotel.jpg"}
+                alt={about_image?.alt || "Hotel Interior"}
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Decorative Element */}
@@ -64,6 +66,10 @@ export function Component({ fieldValues = {} }) {
   );
 }
 
+// ✅ HubSpot requires a named export called Component
+export const Component = AboutSection;
+
+// ✅ Fields schema
 export const fields = (
   <ModuleFields>
     <TextField
@@ -84,8 +90,7 @@ export const fields = (
     <ImageField
       name="about_image"
       label="About Image"
-      default="/assets/about-hotel.jpg"
-      alt="Hotel Interior"
+      default={{ src: "/assets/about-hotel.jpg", alt: "Hotel Interior" }}
     />
     <TextField
       name="stat_1_number"
@@ -110,6 +115,7 @@ export const fields = (
   </ModuleFields>
 );
 
+// ✅ Meta info
 export const meta = {
   label: 'About Section',
 };

@@ -1,6 +1,8 @@
 import React from 'react';
+import { ModuleFields, TextField, ImageField } from '@hubspot/cms-components/fields';
 
-export function Component({ fieldValues = {} }) {
+// ✅ Main component
+function HeroSection({ fieldValues = {} }) {
   const {
     hero_heading = "Experience Luxury",
     hero_subheading = "at Our Boutique Hotel", 
@@ -67,23 +69,15 @@ export function Component({ fieldValues = {} }) {
   );
 }
 
+// ✅ Required by HubSpot
+export const Component = HeroSection;
+
+// ✅ Field definitions
 export const fields = (
   <ModuleFields>
-    <TextField
-      name="hero_heading"
-      label="Hero Heading"
-      default="Experience Luxury"
-    />
-    <TextField
-      name="hero_subheading"
-      label="Hero Subheading"
-      default="at Our Boutique Hotel"
-    />
-    <TextField
-      name="hero_description"
-      label="Hero Description"
-      default="Discover elegantly appointed rooms, world-class amenities, and personalized service in the heart of the city"
-    />
+    <TextField name="hero_heading" label="Hero Heading" default="Experience Luxury" />
+    <TextField name="hero_subheading" label="Hero Subheading" default="at Our Boutique Hotel" />
+    <TextField name="hero_description" label="Hero Description" default="Discover elegantly appointed rooms, world-class amenities, and personalized service in the heart of the city" />
     <ImageField
       name="hero_background_image"
       label="Background Image"
@@ -92,29 +86,14 @@ export const fields = (
         alt: "Boutique Hotel"
       }}
     />
-    <TextField
-      name="primary_cta_text"
-      label="Primary CTA Text"
-      default="Explore Rooms"
-    />
-    <TextField
-      name="primary_cta_url"
-      label="Primary CTA URL"
-      default="/rooms"
-    />
-    <TextField
-      name="secondary_cta_text"
-      label="Secondary CTA Text"
-      default="Contact Us"
-    />
-    <TextField
-      name="secondary_cta_url"
-      label="Secondary CTA URL"
-      default="/contact"
-    />
+    <TextField name="primary_cta_text" label="Primary CTA Text" default="Explore Rooms" />
+    <TextField name="primary_cta_url" label="Primary CTA URL" default="/rooms" />
+    <TextField name="secondary_cta_text" label="Secondary CTA Text" default="Contact Us" />
+    <TextField name="secondary_cta_url" label="Secondary CTA URL" default="/contact" />
   </ModuleFields>
 );
 
+// ✅ Meta info
 export const meta = {
   label: 'Hero Section',
 };

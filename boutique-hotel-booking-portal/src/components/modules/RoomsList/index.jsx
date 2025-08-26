@@ -1,6 +1,8 @@
 import React from 'react';
+import { ImageField, ModuleFields, NumberField, TextField, RepeatedFieldGroup } from '@hubspot/cms-components/fields';
 
-export function Component({ fieldValues = {} }) {
+// ✅ Main component
+function RoomsList({ fieldValues = {} }) {
   const {
     rooms_heading = "Our Luxury Rooms",
     rooms_description = "Choose from our carefully designed rooms, each offering unique amenities and breathtaking views for an unforgettable stay",
@@ -115,6 +117,10 @@ export function Component({ fieldValues = {} }) {
   );
 }
 
+// ✅ Required by HubSpot
+export const Component = RoomsList;
+
+// ✅ Field definitions
 export const fields = (
   <ModuleFields>
     <TextField
@@ -162,37 +168,17 @@ export const fields = (
         }
       ]}
     >
-      <TextField
-        name="room_name"
-        label="Room Name"
-        required={true}
-      />
-      <TextField
-        name="room_description"
-        label="Room Description"
-      />
-      <NumberField
-        name="room_price"
-        label="Room Price (per night)"
-        required={true}
-      />
-      <NumberField
-        name="room_capacity"
-        label="Room Capacity"
-        required={true}
-      />
-      <ImageField
-        name="room_image"
-        label="Room Image"
-      />
-      <TextField
-        name="room_amenities"
-        label="Room Amenities (comma-separated)"
-      />
+      <TextField name="room_name" label="Room Name" required={true} />
+      <TextField name="room_description" label="Room Description" />
+      <NumberField name="room_price" label="Room Price (per night)" required={true} />
+      <NumberField name="room_capacity" label="Room Capacity" required={true} />
+      <ImageField name="room_image" label="Room Image" />
+      <TextField name="room_amenities" label="Room Amenities (comma-separated)" />
     </RepeatedFieldGroup>
   </ModuleFields>
 );
 
+// ✅ Meta info
 export const meta = {
   label: 'Rooms List',
 };

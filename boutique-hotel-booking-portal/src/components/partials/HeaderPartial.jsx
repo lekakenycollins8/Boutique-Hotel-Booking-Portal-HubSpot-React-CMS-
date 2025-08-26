@@ -6,7 +6,7 @@
 import React from 'react';
 import { ModuleFields, TextField } from '@hubspot/cms-components/fields';
 
-export function Component({ fieldValues = {} }) {
+export default function HeaderPartial({ fieldValues = {} }) {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Rooms', href: '/rooms' },

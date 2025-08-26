@@ -6,7 +6,7 @@
 import React from 'react';
 import { ModuleFields, TextField } from '@hubspot/cms-components/fields';
 
-export function Component({ fieldValues = {} }) {
+export default function FooterPartial({ fieldValues = {} }) {
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: 'facebook' },
     { name: 'Instagram', href: '#', icon: 'instagram' },
