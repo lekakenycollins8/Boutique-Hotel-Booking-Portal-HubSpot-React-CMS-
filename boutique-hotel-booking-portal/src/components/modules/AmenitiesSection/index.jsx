@@ -1,5 +1,4 @@
 import React from 'react';
-import { ModuleFields, TextField, RepeatedFieldGroup } from '@hubspot/cms-components/fields';
 
 export function Component({ fieldValues = {} }) {
   const {

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "primary_color",
+    "label": "Primary Color",
+    "name": "primary_color",
+    "type": "color",
+    "default": {
+      "color": "#8B5A3C",
+      "opacity": 100
+    }
+  },
+  {
+    "id": "secondary_color", 
+    "label": "Secondary Color",
+    "name": "secondary_color",
+    "type": "color",
+    "default": {
+      "color": "#D4AF37",
+      "opacity": 100
+    }
+  },
+  {
+    "id": "font_family",
+    "label": "Font Family",
+    "name": "font_family",
+    "type": "font",
+    "default": {
+      "font": "Merriweather",
+      "font_set": "GOOGLE"
+    }
+  },
+  {
+    "id": "hero_background",
+    "label": "Hero Background Image",
+    "name": "hero_background",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Boutique Hotel Hero Background"
+    }
+  }
+]

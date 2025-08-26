@@ -1,0 +1,58 @@
+[
+  {
+    "name": "amenities_heading",
+    "label": "Amenities Section Heading",
+    "type": "text",
+    "default": "Hotel Amenities"
+  },
+  {
+    "name": "amenities_description",
+    "label": "Amenities Section Description", 
+    "type": "textarea",
+    "default": "Enjoy our world-class amenities designed to make your stay memorable."
+  },
+  {
+    "name": "amenities",
+    "label": "Amenities",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "default": 8
+    },
+    "children": [
+      {
+        "name": "amenity_name",
+        "label": "Amenity Name",
+        "type": "text",
+        "default": "Free WiFi"
+      },
+      {
+        "name": "amenity_description",
+        "label": "Amenity Description",
+        "type": "textarea",
+        "default": "High-speed internet access throughout the hotel"
+      },
+      {
+        "name": "amenity_icon",
+        "label": "Amenity Icon",
+        "type": "choice",
+        "choices": [
+          ["wifi", "WiFi"],
+          ["parking", "Parking"],
+          ["pool", "Swimming Pool"],
+          ["gym", "Fitness Center"],
+          ["spa", "Spa & Wellness"],
+          ["restaurant", "Restaurant"],
+          ["bar", "Bar & Lounge"],
+          ["concierge", "Concierge"],
+          ["laundry", "Laundry Service"],
+          ["business", "Business Center"],
+          ["pet", "Pet Friendly"],
+          ["shuttle", "Airport Shuttle"]
+        ],
+        "default": "wifi"
+      }
+    ]
+  }
+]

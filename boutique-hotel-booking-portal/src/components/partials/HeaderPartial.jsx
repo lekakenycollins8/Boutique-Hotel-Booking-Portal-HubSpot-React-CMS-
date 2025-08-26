@@ -23,7 +23,7 @@ export function Component({ fieldValues = {} }) {
             <a href="/" className="flex items-center">
               <img 
                 className="h-8 w-auto" 
-                src="/assets/logo.png" 
+                src="/assets/logo.jpg" 
                 alt="Boutique Hotel"
               />
               <span className="ml-2 text-xl font-bold text-gray-900">

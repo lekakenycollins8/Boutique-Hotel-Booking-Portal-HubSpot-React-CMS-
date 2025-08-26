@@ -1,7 +1,0 @@
-{
-  "label": "Boutique Hotel Theme",
-  "css": "./styles/tailwind.css",
-  "js": "",
-  "modules": "./components/modules",
-  "partials": "./components/partials"
-}

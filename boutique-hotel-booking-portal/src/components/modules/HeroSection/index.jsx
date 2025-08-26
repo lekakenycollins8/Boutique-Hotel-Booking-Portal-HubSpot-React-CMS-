@@ -1,5 +1,4 @@
 import React from 'react';
-import { ModuleFields, TextField, ImageField } from '@hubspot/cms-components/fields';
 
 export function Component({ fieldValues = {} }) {
   const {

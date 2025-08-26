@@ -1,5 +1,4 @@
 import React from 'react';
-import { ModuleFields, TextField, RepeatedFieldGroup, ImageField, NumberField } from '@hubspot/cms-components/fields';
 
 export function Component({ fieldValues = {} }) {
   const {
@@ -11,7 +10,7 @@ export function Component({ fieldValues = {} }) {
         room_description: "Spacious suite with king bed, city views, and luxury amenities",
         room_price: 299,
         room_capacity: 2,
-        room_image: { src: "/assets/room-deluxe-king.jpg", alt: "Deluxe King Suite" },
+        room_image: { src: "/assets/room-deluxe-king.webp", alt: "Deluxe King Suite" },
         room_amenities: "King Bed, City View, Mini Bar, WiFi"
       },
       {
@@ -19,7 +18,7 @@ export function Component({ fieldValues = {} }) {
         room_description: "Modern room with two queen beds, perfect for business travelers",
         room_price: 199,
         room_capacity: 4,
-        room_image: { src: "/assets/room-executive-double.jpg", alt: "Executive Double Room" },
+        room_image: { src: "/assets/room-executive-double.webp", alt: "Executive Double Room" },
         room_amenities: "Two Queen Beds, Work Desk, Coffee Maker, WiFi"
       },
       {

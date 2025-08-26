@@ -1,5 +1,4 @@
 import React from 'react';
-import { ModuleFields, TextField, ImageField } from '@hubspot/cms-components/fields';
 
 export function Component({ fieldValues = {} }) {
   const {
@@ -49,11 +48,11 @@ export function Component({ fieldValues = {} }) {
           {/* Image */}
           <div className="relative">
             <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-xl">
-              <img
-                src={about_image.src}
-                alt={about_image.alt}
-                className="w-full h-full object-cover"
-              />
+            <img
+              src={about_image?.src || "/assets/about-hotel.jpg"}
+              alt={about_image?.alt || "Hotel Interior"}
+              className="w-full h-full object-cover"
+            />
             </div>
             
             {/* Decorative Element */}
@@ -75,20 +74,18 @@ export const fields = (
     <TextField
       name="about_description_1"
       label="First Description Paragraph"
-      default="Nestled in the heart of the city, our boutique hotel offers an intimate and luxurious experience that combines modern comfort with timeless elegance. Each room is thoughtfully designed to provide our guests with a sanctuary of tranquility and sophistication."
+      default="Nestled in the heart of the city, our boutique hotel offers an intimate and luxurious experience..."
     />
     <TextField
       name="about_description_2"
       label="Second Description Paragraph"
-      default="From our personalized concierge services to our carefully curated amenities, every detail has been crafted to ensure your stay is nothing short of extraordinary. Discover the perfect blend of comfort, style, and hospitality that makes our hotel a destination in itself."
+      default="From our personalized concierge services to our carefully curated amenities..."
     />
     <ImageField
       name="about_image"
       label="About Image"
-      default={{
-        src: "/assets/about-hotel.jpg",
-        alt: "Hotel Interior"
-      }}
+      default="/assets/about-hotel.jpg"
+      alt="Hotel Interior"
     />
     <TextField
       name="stat_1_number"
