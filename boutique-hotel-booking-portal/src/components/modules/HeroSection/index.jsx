@@ -7,7 +7,7 @@ function HeroSection({ fieldValues = {} }) {
     hero_heading = "Experience Luxury",
     hero_subheading = "at Our Boutique Hotel", 
     hero_description = "Discover elegantly appointed rooms, world-class amenities, and personalized service in the heart of the city",
-    hero_background_image = { src: "/assets/hero.jpg", alt: "Boutique Hotel" },
+    hero_background_image = { src: "hero-bg", alt: "Boutique hotel hero background" },
     primary_cta_text = "Explore Rooms",
     primary_cta_url = "/rooms",
     secondary_cta_text = "Contact Us",
@@ -82,8 +82,8 @@ export const fields = (
       name="hero_background_image"
       label="Background Image"
       default={{
-        src: "/assets/hero.jpg",
-        alt: "Boutique Hotel"
+        src: "hero-bg",
+        alt: "Boutique hotel hero background"
       }}
     />
     <TextField name="primary_cta_text" label="Primary CTA Text" default="Explore Rooms" />

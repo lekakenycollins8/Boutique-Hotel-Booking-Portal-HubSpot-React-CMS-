@@ -7,7 +7,7 @@ function AboutSection({ fieldValues = {} }) {
     about_heading = "Welcome to Our Boutique Hotel",
     about_description_1 = "Nestled in the heart of the city, our boutique hotel offers an intimate and luxurious experience that combines modern comfort with timeless elegance. Each room is thoughtfully designed to provide our guests with a sanctuary of tranquility and sophistication.",
     about_description_2 = "From our personalized concierge services to our carefully curated amenities, every detail has been crafted to ensure your stay is nothing short of extraordinary. Discover the perfect blend of comfort, style, and hospitality that makes our hotel a destination in itself.",
-    about_image = { src: "/assets/about-hotel.jpg", alt: "Hotel Interior" },
+    about_image = { src: "about-hotel-image", alt: "About our boutique hotel" },
     stat_1_number = "50+",
     stat_1_label = "Luxury Rooms",
     stat_2_number = "24/7",
@@ -51,8 +51,8 @@ function AboutSection({ fieldValues = {} }) {
           <div className="relative">
             <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-xl">
               <img
-                src={about_image?.src || "/assets/about-hotel.jpg"}
-                alt={about_image?.alt || "Hotel Interior"}
+                src={about_image?.src || "about-hotel-image"}
+                alt={about_image?.alt || "About our boutique hotel"}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -90,7 +90,7 @@ export const fields = (
     <ImageField
       name="about_image"
       label="About Image"
-      default={{ src: "/assets/about-hotel.jpg", alt: "Hotel Interior" }}
+      default={{ src: "about-hotel-image", alt: "About our boutique hotel" }}
     />
     <TextField
       name="stat_1_number"

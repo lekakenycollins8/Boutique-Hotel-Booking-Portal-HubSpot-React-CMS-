@@ -12,7 +12,7 @@ function RoomsList({ fieldValues = {} }) {
         room_description: "Spacious suite with king bed, city views, and luxury amenities",
         room_price: 299,
         room_capacity: 2,
-        room_image: { src: "/assets/room-deluxe-king.webp", alt: "Deluxe King Suite" },
+        room_image: { src: "room-deluxe-king", alt: "Deluxe king room with modern amenities" },
         room_amenities: "King Bed, City View, Mini Bar, WiFi"
       },
       {
@@ -20,7 +20,7 @@ function RoomsList({ fieldValues = {} }) {
         room_description: "Modern room with two queen beds, perfect for business travelers",
         room_price: 199,
         room_capacity: 4,
-        room_image: { src: "/assets/room-executive-double.webp", alt: "Executive Double Room" },
+        room_image: { src: "room-executive-double", alt: "Executive double room with city view" },
         room_amenities: "Two Queen Beds, Work Desk, Coffee Maker, WiFi"
       },
       {
@@ -28,7 +28,7 @@ function RoomsList({ fieldValues = {} }) {
         room_description: "Elegant room with stunning ocean views and private balcony",
         room_price: 399,
         room_capacity: 2,
-        room_image: { src: "/assets/room-ocean-view.jpg", alt: "Premium Ocean View" },
+        room_image: { src: "room-ocean-view", alt: "Ocean view suite with balcony" },
         room_amenities: "Ocean View, Private Balcony, Jacuzzi, WiFi"
       }
     ]
@@ -147,7 +147,7 @@ export const fields = (
           room_description: "Spacious suite with king bed, city views, and luxury amenities",
           room_price: 299,
           room_capacity: 2,
-          room_image: { src: "/assets/room-deluxe-king.jpg", alt: "Deluxe King Suite" },
+          room_image: { src: "room-deluxe-king", alt: "Deluxe king room with modern amenities" },
           room_amenities: "King Bed, City View, Mini Bar, WiFi"
         },
         {
@@ -155,7 +155,7 @@ export const fields = (
           room_description: "Modern room with two queen beds, perfect for business travelers",
           room_price: 199,
           room_capacity: 4,
-          room_image: { src: "/assets/room-executive-double.jpg", alt: "Executive Double Room" },
+          room_image: { src: "room-executive-double", alt: "Executive double room with city view" },
           room_amenities: "Two Queen Beds, Work Desk, Coffee Maker, WiFi"
         },
         {
@@ -163,7 +163,7 @@ export const fields = (
           room_description: "Elegant room with stunning ocean views and private balcony",
           room_price: 399,
           room_capacity: 2,
-          room_image: { src: "/assets/room-ocean-view.jpg", alt: "Premium Ocean View" },
+          room_image: { src: "room-ocean-view", alt: "Ocean view suite with balcony" },
           room_amenities: "Ocean View, Private Balcony, Jacuzzi, WiFi"
         }
       ]}

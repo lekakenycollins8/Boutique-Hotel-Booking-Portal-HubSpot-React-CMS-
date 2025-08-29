@@ -23,8 +23,8 @@ export default function HeaderPartial({ fieldValues = {} }) {
             <a href="/" className="flex items-center">
               <img 
                 className="h-8 w-auto" 
-                src="/assets/logo.jpg" 
-                alt="Boutique Hotel"
+                src="hotel-logo" 
+                alt="Boutique hotel logo"
               />
               <span className="ml-2 text-xl font-bold text-gray-900">
                 Boutique Hotel

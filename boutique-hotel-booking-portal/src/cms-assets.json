@@ -1,0 +1,48 @@
+{
+  "label": "Boutique Hotel Booking Portal Assets",
+  "assets": [
+    {
+      "id": "hero-bg",
+      "type": "image",
+      "src": "./assets/hero.jpg",
+      "alt": "Boutique hotel hero background"
+    },
+    {
+      "id": "hotel-logo",
+      "type": "image", 
+      "src": "./assets/logo.jpg",
+      "alt": "Boutique hotel logo"
+    },
+    {
+      "id": "about-hotel-image",
+      "type": "image",
+      "src": "./assets/about-hotel.jpg", 
+      "alt": "About our boutique hotel"
+    },
+    {
+      "id": "room-ocean-view",
+      "type": "image",
+      "src": "./assets/room-ocean-view.jpg",
+      "alt": "Ocean view suite with balcony"
+    },
+    {
+      "id": "room-deluxe-king", 
+      "type": "image",
+      "src": "./assets/room-deluxe-king.webp",
+      "alt": "Deluxe king room with modern amenities"
+    },
+    {
+      "id": "room-executive-double",
+      "type": "image", 
+      "src": "./assets/room-executive-double.webp",
+      "alt": "Executive double room with city view"
+    }
+  ],
+  "css": [
+    {
+      "id": "tailwind-styles",
+      "src": "../../dist/tailwind.css"
+    }
+  ],
+  "js": []
+}
